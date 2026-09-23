@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DigiStudio — tracker, same engine</title>
+  <meta name="description" content="DigiStudio retro port: original FLD / TSP four-channel MOD engine with a DigiStudio UI. Downloads for macOS and Windows. Linux upcoming.">
+  <link rel="canonical" href="https://digistudio.jlundmark.org/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DigiStudio">
+  <meta property="og:url" content="https://digistudio.jlundmark.org/">
+  <meta property="og:title" content="DigiStudio">
+  <meta property="og:description" content="8 MHz. Four channels. No excuses. Same engine — new UI.">
+  <meta property="og:image" content="https://digistudio.jlundmark.org/assets/splash.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <div class="face">
+    <header class="top">
+      <p class="brand">DIGISTUDIO</p>
+      <p class="cred">FrontLine Design · The Space Pigs · Johan L.</p>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-visual" role="img" aria-label="DigiStudio splash">
+          <img src="/assets/splash.png" alt="" width="640" height="240">
+        </div>
+        <h1 id="hero-title">Same engine. New UI. 30+ years later.</h1>
+        <p class="lede">
+          A DigiStudio-styled MOD tracker built on the original DigiStudio / TSP / FLD mixer —
+          the same four-channel software mix that later ran in Pinball Fantasies.
+        </p>
+      </section>
+
+      <section class="section" id="downloads" aria-labelledby="dl-title">
+        <h2 id="dl-title">Downloads</h2>
+        <p class="intro">Self-contained builds. macOS: unzip, then right-click → Open (Gatekeeper).</p>
+        <ul class="dl-grid">
+          <li class="dl">
+            <h3>macOS</h3>
+            <p>DigiStudio.app with bundled demo module.</p>
+            <a class="btn" href="/downloads/DigiStudio-macOS.zip">Download macOS</a>
+          </li>
+          <li class="dl">
+            <h3>Windows</h3>
+            <p>Win32 DigiStudio shell + same mixer.</p>
+            <a class="btn" id="win-dl" href="/downloads/DigiStudio-windows.zip">Download Windows</a>
+            <p class="hint" id="win-hint" hidden>Windows zip not on the server yet — drop <code>DigiStudio-windows.zip</code> from the PC build into <code>downloads/</code>.</p>
+          </li>
+          <li class="dl soon">
+            <h3>Linux</h3>
+            <p>Upcoming.</p>
+            <span class="btn btn-disabled" aria-disabled="true">Coming soon</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="about-title">
+        <h2 id="about-title">History</h2>
+        <div class="panel">
+          <p>
+            DigiStudio was written in the early 1990s for an 8&nbsp;MHz 80286.
+            Software mixing played four sampled channels — even on the PC speaker.
+            We were among the first. Same tech later ran in Pinball Fantasies:
+            four-channel Amiga-style music mixed in software.
+          </p>
+          <p class="punch">8 MHz. Four channels. No excuses.</p>
+          <p>
+            Not a reimplementation — original DigiStudio / TSP / FLD source converted
+            for modern systems. Same engine as DigiStudio 2.0 and PC Pinball Fantasies / Illusions.
+            Kept original behaviour (and probably the bugs). UI rewritten.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="keys-title">
+        <h2 id="keys-title">Keys &amp; effects</h2>
+        <div class="two-col">
+          <div class="panel mono">
+            <h3>Keys</h3>
+            <pre>SPACE   stop if playing, else edit
+ESC     stop
+F5 / P  play
+F8      stop
+F1 / F2 octave
++/-     sample
+TAB     channel
+1–4     mute
+Z..M / Q..P  piano
+CTRL-O/S/V   file</pre>
+            <p class="muted">Disk Op: load/save module + sample. SMP-ED: wave markers A/B, cut/trim/clr.</p>
+          </div>
+          <div class="panel mono">
+            <h3>Effects (classic MOD)</h3>
+            <pre>0xy arpeggio      1xx porta up
+2xx porta down    3xx tone porta
+4xy vibrato       5xy tone+vol
+9xx offset        Axy vol slide
+Bxx pos jump      Cxx set volume
+Dxx ptn break     Fxx speed/tempo
+E0x filter        E9x retrig
+ECx note cut      EDx note delay</pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="credits-title">
+        <h2 id="credits-title">Credits</h2>
+        <div class="panel">
+          <p><strong>Original version:</strong> The Space Pigs — Daniel Forsgren, Gabriel Bergqvist, Johan Lundmark.</p>
+          <p><strong>Retro port:</strong> Johan L.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <p>digistudio.jlundmark.org · FrontLine Design era tracker, modern shells</p>
+    </footer>
+  </div>
+  <script>
+    // Soft-fail Windows link if the zip is missing (local or live).
+    (function () {
+      var a = document.getElementById("win-dl");
+      var hint = document.getElementById("win-hint");
+      if (!a) return;
+      fetch(a.getAttribute("href"), { method: "HEAD" }).then(function (r) {
+        if (!r.ok) {
+          a.setAttribute("aria-disabled", "true");
+          a.classList.add("btn-disabled");
+          a.removeAttribute("href");
+          a.textContent = "Windows — pending upload";
+          if (hint) hint.hidden = false;
+        }
+      }).catch(function () {
+        if (hint) hint.hidden = false;
+      });
+    })();
+  </script>
+</body>
+</html>

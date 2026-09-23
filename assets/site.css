@@ -1,0 +1,246 @@
+:root {
+  --face: #aaaaaa;
+  --face2: #999999;
+  --well: #cccccc;
+  --ink: #000000;
+  --hi: #ffffff;
+  --shadow: #666666;
+  --dim: #555555;
+  --pat: #0066bb;
+  --yellow: #ffff00;
+  --red: #cc0000;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "IBM Plex Mono", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+  background:
+    linear-gradient(180deg, #b8b8b8 0%, var(--face) 28%, #9a9a9a 100%);
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+a { color: var(--pat); }
+a:hover, a:focus-visible { color: var(--ink); }
+
+.face {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 28px 20px 48px;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 16px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--shadow);
+  margin-bottom: 24px;
+}
+
+.brand {
+  margin: 0;
+  font-size: clamp(1.75rem, 5vw, 2.4rem);
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  text-shadow: 1px 1px 0 var(--hi);
+}
+
+.cred {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--dim);
+}
+
+.hero {
+  margin-bottom: 36px;
+}
+
+.hero-visual {
+  margin: 0 -4px 20px;
+  background: var(--ink);
+  border: 2px solid var(--shadow);
+  box-shadow:
+    inset 1px 1px 0 var(--dim),
+    1px 1px 0 var(--hi);
+  overflow: hidden;
+}
+
+.hero-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: clamp(1.15rem, 3.2vw, 1.45rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.lede {
+  margin: 0;
+  max-width: 42rem;
+  font-size: 0.95rem;
+}
+
+.section {
+  margin: 32px 0;
+}
+
+.section h2 {
+  margin: 0 0 10px;
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+.intro {
+  margin: 0 0 16px;
+  font-size: 0.9rem;
+}
+
+.dl-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.dl {
+  background: var(--face2);
+  border: 2px solid var(--shadow);
+  box-shadow:
+    inset 1px 1px 0 var(--hi),
+    inset -1px -1px 0 var(--dim);
+  padding: 14px 14px 16px;
+}
+
+.dl h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+}
+
+.dl p {
+  margin: 0 0 12px;
+  font-size: 0.8rem;
+  color: var(--dim);
+}
+
+.dl.soon {
+  opacity: 0.85;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  background: var(--face);
+  color: var(--hi);
+  text-decoration: none;
+  border: 2px solid var(--shadow);
+  box-shadow:
+    inset 1px 1px 0 var(--hi),
+    inset -1px -1px 0 var(--dim);
+  font: inherit;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-shadow: 1px 1px 0 var(--dim);
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background: var(--well);
+  color: var(--ink);
+  text-shadow: none;
+  text-decoration: none;
+}
+
+.btn-disabled {
+  opacity: 0.55;
+  pointer-events: none;
+  cursor: default;
+}
+
+.hint {
+  margin: 10px 0 0;
+  font-size: 0.7rem;
+  color: var(--dim);
+}
+
+.panel {
+  background: var(--well);
+  border: 2px solid var(--shadow);
+  box-shadow: inset 1px 1px 0 var(--dim);
+  padding: 14px 16px;
+}
+
+.panel p {
+  margin: 0 0 10px;
+  font-size: 0.88rem;
+}
+
+.panel p:last-child {
+  margin-bottom: 0;
+}
+
+.punch {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.two-col {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.mono h3 {
+  margin: 0 0 8px;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.mono pre {
+  margin: 0 0 10px;
+  font: inherit;
+  font-size: 0.72rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+
+.muted {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--dim);
+}
+
+.foot {
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 2px solid var(--shadow);
+  font-size: 0.7rem;
+  color: var(--dim);
+}
+
+.foot p { margin: 0; }
+
+@media (max-width: 520px) {
+  .face { padding: 18px 14px 36px; }
+  .mono pre { font-size: 0.68rem; }
+}
