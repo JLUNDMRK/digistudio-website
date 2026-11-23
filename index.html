@@ -29,7 +29,7 @@
         <div class="hero-visual" role="img" aria-label="DigiStudio splash">
           <img src="/assets/splash.png" alt="" width="640" height="240">
         </div>
-        <h1 id="hero-title">Same engine. New UI. 30+ years later.</h1>
+        <h1 id="hero-title">Same engine. New platforms. 30+ years later.</h1>
         <p class="lede">
           A DigiStudio-styled MOD tracker built on the original DigiStudio / TSP / FLD mixer —
           the same four-channel software mix that later ran in Pinball Fantasies.
@@ -41,15 +41,21 @@
         <p class="intro">Self-contained builds. macOS: notarized Developer ID — unzip and open.</p>
         <ul class="dl-grid">
           <li class="dl">
-            <h3>macOS</h3>
-            <p>DigiStudio.app with bundled demo module.</p>
-            <a class="btn" href="/downloads/DigiStudio-macOS.zip">Download macOS</a>
+            <h3>Android</h3>
+            <p>Google Play testing is in progress.</p>
           </li>
           <li class="dl">
+            <h3>iPhone and iPad</h3>
+            <p>App Store link to follow.</p>
+          </li>
+          <li class="dl">
+            <h3>macOS</h3>
+            <p>DigiStudio.app with a bundled demo module.</p>
+            <a class="btn" href="/downloads/DigiStudio-macOS.zip">Download macOS</a>
+          </li>
+          <li class="dl soon">
             <h3>Windows</h3>
-            <p>Win32 DigiStudio shell + same mixer.</p>
-            <a class="btn" id="win-dl" href="/downloads/DigiStudio-windows.zip">Download Windows</a>
-            <p class="hint" id="win-hint" hidden>Windows zip not on the server yet — drop <code>DigiStudio-windows.zip</code> from the PC build into <code>downloads/</code>.</p>
+            <p>Win32 build pending.</p>
           </li>
           <li class="dl soon">
             <h3>Linux</h3>
@@ -57,23 +63,33 @@
             <span class="btn btn-disabled" aria-disabled="true">Coming soon</span>
           </li>
         </ul>
+        <div class="panel" id="demo-mods">
+          <h3>Demo modules</h3>
+          <p>Three favourites to try with DigiStudio. It supports the original four-channel MOD format. Find more at <a href="https://modarchive.org/">The Mod Archive</a>.</p>
+          <ul>
+            <li><a href="https://modarchive.org/module.php?186736">Amegas</a> by Karsten Obarski, creator of the original Soundtracker.</li>
+            <li><a href="https://modarchive.org/module.php?82480">A Final Hyperbase</a> at The Mod Archive.</li>
+            <li><a href="https://ftp.modland.com/pub/modules/Protracker/Captain/space_debris.mod">Space Debris</a> by Captain. Direct MOD download from Modland.</li>
+          </ul>
+          <h3>Try it on Android</h3>
+          <ol>
+            <li>Download one of the MOD files above to your device.</li>
+            <li>In DigiStudio, open <strong>Disk Op</strong> and load the module using Android's file picker.</li>
+            <li>Tap <strong>Play Sng</strong>. Check that you can hear the music and that the pattern rows advance. Tap <strong>Stop</strong> to end playback.</li>
+          </ol>
+          <p>These steps also work for Google Play review and closed testing. No sign-in is required.</p>
+        </div>
       </section>
 
       <section class="section" aria-labelledby="about-title">
         <h2 id="about-title">History</h2>
         <div class="panel">
-          <p>
-            DigiStudio was written in the early 1990s for an 8&nbsp;MHz 80286.
-            Software mixing played four sampled channels — even on the PC speaker.
-            We were among the first. Same tech later ran in Pinball Fantasies:
-            four-channel Amiga-style music mixed in software.
-          </p>
-          <p class="punch">8 MHz. Four channels. No excuses.</p>
-          <p>
-            Not a reimplementation — original DigiStudio / TSP / FLD source converted
-            for modern systems. Same engine as DigiStudio 2.0 and PC Pinball Fantasies / Illusions.
-            Kept original behaviour (and probably the bugs). UI rewritten.
-          </p>
+          <p>The late 1980s saw a group of school friends in Uppsala, Sweden, form The Space Pigs around a shared love of programming, electronics and the demoscene.</p>
+          <p>The group released <em>Megademo</em> in December 1989 with tracker music for the PC speaker and LPT port. <a href="https://demozoo.org/productions/127639/">Demozoo credits it as the first MS-DOS demo with tracker music</a>.</p>
+          <p>DigiStudio was the group's first software tool. The DOS MOD player and editor mixed four sampled channels in software and could play them through the built-in PC speaker on an 8 MHz 286 without a sound card. <a href="https://demozoo.org/groups/55023/">Demozoo archives DigiStudio v1.5 from February 1993</a>.</p>
+          <p>DigiStudio became the group's first commercial product when it was bundled with Covox audio hardware, a less widely adopted alternative to Sound Blaster.</p>
+          <p>Several members went on to form Frontline Design and port Digital Illusions' <em>Pinball Fantasies</em> and <em>Pinball Illusions</em> to PC. The author of this site runs <em>Pinball Fantasies</em> at full frame rate on an IBM 80286 running at 8 MHz, with a fast VGA card and the built-in PC speaker. A Sound Blaster makes it sound even better. <a href="https://martinlindell.com/2022/05/01/historien-om-dice-del-2/">Martin Lindell's history of DICE</a></p>
+          <p>DigiStudio Reborn brings the original four-channel mixer to modern systems with a new interface. It is a free hobby project.</p>
         </div>
       </section>
 
@@ -113,32 +129,30 @@ ECx note cut      EDx note delay</pre>
         <div class="panel">
           <p><strong>Original version:</strong> The Space Pigs — Daniel Forsgren, Gabriel Bergqvist, Johan Lundmark.</p>
           <p><strong>Retro port:</strong> Johan L.</p>
+          <p>This website and most of the work to bring DigiStudio to modern platforms were done with minimal human intervention, as an experiment in what AI could do in 2026.</p>
+        </div>
+      </section>
+      <section class="section" id="privacy" aria-labelledby="privacy-title">
+        <h2 id="privacy-title">Privacy policy</h2>
+        <div class="panel">
+          <p>Updated November 23, 2026. This policy covers DigiStudio for Android (com.tsp.digistudio) and this website.</p>
+          <p>The Android app requires no account and includes no ads, analytics, or crash reporting. DigiStudio does not collect or share personal data from the app. It processes music modules and samples on your device. Android's file picker lets you select where to import or export files, including a storage provider of your choice.</p>
+          <p>This website has no tracking scripts or forms. Cloudflare hosts it and may process technical information such as IP addresses for operation and security. If you contact us by email, we use your address and message to respond and keep them for as long as needed to handle your request.</p>
+          <p>For privacy questions or to request deletion of a support email, contact <a href="mailto:TSP@jlundmark.org">TSP@jlundmark.org</a>.</p>
+        </div>
+      </section>
+      <section class="section" id="terms" aria-labelledby="terms-title">
+        <h2 id="terms-title">Terms</h2>
+        <div class="panel">
+          <p>DigiStudio is a free hobby project. Use music, modules, and samples you have the right to use. Licenses for bundled material are provided where it is distributed.</p>
+          <p>DigiStudio is provided as is. Features and platform support may change. Your rights under applicable mandatory consumer law still apply.</p>
         </div>
       </section>
     </main>
 
     <footer class="foot">
-      <p>digistudio.jlundmark.org · FrontLine Design era tracker, modern shells</p>
+      <p><a href="#privacy">Privacy policy</a> · <a href="#terms">Terms</a> · <a href="mailto:TSP@jlundmark.org">TSP@jlundmark.org</a></p>
     </footer>
   </div>
-  <script>
-    // Soft-fail Windows link if the zip is missing (local or live).
-    (function () {
-      var a = document.getElementById("win-dl");
-      var hint = document.getElementById("win-hint");
-      if (!a) return;
-      fetch(a.getAttribute("href"), { method: "HEAD" }).then(function (r) {
-        if (!r.ok) {
-          a.setAttribute("aria-disabled", "true");
-          a.classList.add("btn-disabled");
-          a.removeAttribute("href");
-          a.textContent = "Windows — pending upload";
-          if (hint) hint.hidden = false;
-        }
-      }).catch(function () {
-        if (hint) hint.hidden = false;
-      });
-    })();
-  </script>
 </body>
 </html>

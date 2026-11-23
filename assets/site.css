@@ -198,6 +198,31 @@ h1 {
   margin-bottom: 0;
 }
 
+.panel h3 {
+  margin: 14px 0 8px;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+}
+
+.panel h3:first-child {
+  margin-top: 0;
+}
+
+.panel ul,
+.panel ol {
+  margin: 0 0 12px;
+  padding-left: 1.25rem;
+  font-size: 0.88rem;
+}
+
+.panel li {
+  margin: 0 0 6px;
+}
+
+#demo-mods {
+  margin-top: 16px;
+}
+
 .punch {
   font-weight: 700;
   letter-spacing: 0.04em;
